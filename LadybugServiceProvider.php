@@ -2,6 +2,7 @@
 
 namespace Bangpound\Silex;
 
+use Ladybug\Dumper;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
@@ -17,9 +18,15 @@ class LadybugServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        $app['ladybug'] = $app->share(function () use ($app) {
-            return new \Ladybug\Dumper();
+        $app['ladybug.dumper'] = $app->share(function () use ($app) {
+            return new Dumper();
         });
+
+        $app['twig'] = $app->share($app->extend('twig', function (\Twig_Environment $twig, $app) {
+            $twig->addExtension(new LadybugExtension($app));
+
+            return $twig;
+        }));
     }
 
     /**
