@@ -2,11 +2,7 @@
     "name": "bangpound/ladybug-silex-provider",
     "description": "Ladybug var dump provider for Silex",
     "require": {
-        "raulfraile/ladybug": "~1.0.1",
-        "raulfraile/ladybug-installer": "~1.0.1",
-        "raulfraile/ladybug-plugin-extra": "~1.0.0",
-        "raulfraile/ladybug-theme-modern": "~1.0.0",
-        "raulfraile/jivaro": "~1.0.0-beta1"
+        "raulfraile/ladybug": "~1.0"
     },
     "autoload": {
         "psr-0": { "Bangpound\\Silex\\": "" }
