@@ -5,7 +5,7 @@
         "raulfraile/ladybug": "~1.0"
     },
     "autoload": {
-        "psr-0": { "Bangpound\\Silex\\": "" }
+        "psr-4": { "Bangpound\\Silex\\": "" }
     },
     "target-dir": "Bangpound/Silex",
     "license": "MIT",
