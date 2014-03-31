@@ -7,7 +7,6 @@
     "autoload": {
         "psr-4": { "Bangpound\\Silex\\": "" }
     },
-    "target-dir": "Bangpound/Silex",
     "license": "MIT",
     "authors": [
         {
